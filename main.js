@@ -1,13 +1,13 @@
-import movieRoutes from "./routes/movies.route";
-
-const express=require('express')
+import express from "express";
+import movieRutes from "./routes/movies.route.js"
 const app=express();
+const PORT=8000
 
 app.get('/',(req,res)=>{
-    res.json({movie_name :"rayan"})
+    res.json({movie_name :"rayan2"})
 })
-app.use('/movies', movieRoutes)
-const PORT=8000
+//client-->middleware->server
+app.use('/movies',movieRutes)
 app.listen(PORT,()=>{
     console.log(`server is running on port http://localhost:${PORT}`)
 })
