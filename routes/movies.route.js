@@ -3,12 +3,15 @@ import {
     MovieDelete, 
     MovieCreate, 
     MovieIndex, 
-    MovieUpdation } 
+    MovieUpdation, 
+    SingleMovie} 
     from '../controllers/movies.controller.js';
 
 const router =express.Router()
 //R-Read API for get all movies detail 
 router.get('/',MovieIndex)
+
+router.get('/:id', SingleMovie)
 
 //C- Create API for create a new movie
 router.post('/', MovieCreate)
