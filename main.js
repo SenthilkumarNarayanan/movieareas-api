@@ -1,6 +1,8 @@
+import movieRoutes from "./routes/movies.route";
+
 const express=require('express')
 const app=express();
-import movieRoutes from "./routes/movies.route"
+
 app.get('/',(req,res)=>{
     res.json({movie_name :"rayan"})
 })
