@@ -3,8 +3,8 @@
 
 };
 export const MovieCreate=(req,res)=>{
-    res.send("movies create")
-
+console.log(req.body)
+return res.json(req.body)
 };
 export const MovieUpdation= (req,res)=>{
     res.send("movies updated")

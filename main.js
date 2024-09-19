@@ -9,9 +9,12 @@ const PORT=8000
 // })
 //client-->middleware->server
 
-//connect const
+//connect const'app.use(express.json())
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 connectDB()
 app.use('/movies',movieRutes)
+
 app.listen(PORT,()=>{
     console.log(`server is running on port http://localhost:${PORT}`)
 })
